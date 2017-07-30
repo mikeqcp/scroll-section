@@ -1,27 +1,21 @@
-# scroll section
+# scroll-section
 
-Get the AMD module located at `scroll-section.js` and include it in your project.
-
-Here is a sample integration:
+React component that detects when it is in the middle of the viewport.
 
 ```js
-require.config({
-  paths: {
-    'react': 'vendor/bower_components/react/react',
-    'ScrollSection': 'scroll-section'
-  }
-});
+import Section from 'scroll-section';
 
-require(['react', 'ScrollSection'], function(React, ScrollSection) {
+// ...
 
-  React.render(React.createElement(ScrollSection), document.getElementById('widget-container'));
+<Section
+  className="your-classname"
+  onBecomeActive={() => onBecomeActive()}
+>
+  // any section content
+</Section>
 
-});
+// ...
 ```
 
-## Development
-
-* Development server `npm start`.
-* Continuously run tests on file changes `npm run watch-test`;
-* Run tests: `npm test`;
-* Build `npm run build`;
+### Options
+* onBecomeActive [function]: is invoked when the section becomes active
