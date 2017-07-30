@@ -1,0 +1,13 @@
+.idea
+
+node_modules
+
+# other files
+.babelrc
+.editorconfig
+.eslintrc
+.gitignore
+.npmignore
+index.html
+karma.conf.js
+webpack.config.js
