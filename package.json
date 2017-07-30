@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "scroll section",
   "scripts": {
-    "test": "eslint lib/ spec/ && ./node_modules/karma/bin/karma start karma.conf.js",
-    "watch-test": "./node_modules/karma/bin/karma start karma.conf.js --auto-watch --no-single-run",
     "build": "webpack -p",
     "start": "webpack-dev-server --inline --hot"
   },
@@ -39,6 +37,10 @@
   },
   "dependencies": {
     "babel-runtime": "~5.8.20",
-    "react": "~0.13.3"
+    "classnames": "^2.2.5",
+    "lodash.throttle": "^4.1.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "scroll-to": "0.0.2"
   }
 }

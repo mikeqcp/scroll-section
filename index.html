@@ -1,14 +1,28 @@
 <html>
 <head>
   <title>scroll section Demo</title>
+
+  <style>
+    .section {
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: peachpuff;
+    }
+    .section:nth-child(2n) {
+      background: lightblue;
+    }
+  </style>
 </head>
 <body>
   <div id="main"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
   <script src="scroll-section.js"></script>
   <script>
     /* jshint undef:false */
-    React.render(React.createElement(ScrollSection), document.getElementById('main'));
+    ReactDOM.render(React.createElement(ScrollSection), document.getElementById('main'));
   </script>
 </body>
 </html>
