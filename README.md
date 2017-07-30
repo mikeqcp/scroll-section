@@ -10,6 +10,7 @@ import Section from 'scroll-section';
 <Section
   className="your-classname"
   onBecomeActive={() => onBecomeActive()}
+  onBecomeInactive={() => onBecomeInactive()}
 >
   // any section content
 </Section>
@@ -18,4 +19,5 @@ import Section from 'scroll-section';
 ```
 
 ### Options
-* onBecomeActive [function]: is invoked when the section becomes active
+* onBecomeActive [function]: is called when the section becomes active
+* onBecomeInactive [function]: is called when the section becomes inactive

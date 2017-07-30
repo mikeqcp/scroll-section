@@ -9,6 +9,7 @@ export default class ScrollSection extends Component {
     children: PropTypes.any,
     className: PropTypes.string,
     onBecomeActive: PropTypes.func,
+    onBecomeInactive: PropTypes.func,
   };
 
   componentDidMount() {
@@ -29,13 +30,18 @@ export default class ScrollSection extends Component {
   }
 
   onScroll = throttle(() => {
+    const {
+      onBecomeInactive = () => null,
+      onBecomeActive = () => null
+    } = this.props;
+
     const bd = this.rootEl.getBoundingClientRect();
     const screenMiddle = window.innerHeight / 2;
     const isActive = (bd.top < screenMiddle) && (bd.top + bd.height > screenMiddle);
 
-    if (isActive && !this.isActive) {
-      this.props.onBecomeActive();
-    }
+    if (isActive && !this.isActive) {onBecomeActive();}
+    if (!isActive && this.isActive) {onBecomeInactive();}
+
     this.isActive = isActive;
   }, 100);
 

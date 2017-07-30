@@ -7,9 +7,8 @@ export default class Demo extends Component {
       <Section
         className="section"
         key={id}
-        onBecomeActive={() => {
-          console.log(`${id} become active`)
-        }}
+        onBecomeActive={() => {console.log(`${id} become active`)}}
+        onBecomeInactive={() => {console.log(`${id} become inactive`)}}
       >
         {content}
       </Section>
